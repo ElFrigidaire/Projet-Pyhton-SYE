@@ -69,8 +69,10 @@ class TaskSystem:
                 #On a essayé de lock et delock les variables, mais ça n'a pas marché
                 # for lock in task.writes:
                 #     lock.acquire()
-                
-                with task.writes[0]:
+                if len(task.writes)>0:
+                    with task.writes[0]:
+                        task.run()
+                else: 
                     task.run()
                 
                 # for lock in task.writes:

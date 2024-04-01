@@ -194,8 +194,8 @@ def test_maxpar_simple():
 
 # Appel de la fonction de test lors de l'exécution du fichier
 if __name__ == "__main__":
-    test_maxpar_simple()
+    # test_maxpar_simple()
     # test_maxpar_complex()
     # test_parra(1000)
-    # test_rapidité()
+    test_rapidité()
     # test_lock()
