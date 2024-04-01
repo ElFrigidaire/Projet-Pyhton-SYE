@@ -2,6 +2,7 @@ import bibliothèque as bib
 import time
 import threading
 
+#Initialisation des variables
 X=None
 Y=None
 Z=None
@@ -9,6 +10,7 @@ xlist=[]
 ylist=[]
 message=""
 
+#On créé les verrous pour empêcher plusieurs variables de modifier en même temps une valeur
 lockX=threading.Lock()
 lockY=threading.Lock()
 lockZ=threading.Lock()
@@ -136,10 +138,10 @@ def test_maxpar_complex():
     s1.draw()
 
     # # Test de déterminisme avec des exécutions randomisées
-    # s1.detTestRnd()
+    s1.detTestRnd()
 
-    # # Comparaison des temps d'exécution séquentielle et parallèle
-    # s1.parCost()
+    # Comparaison des temps d'exécution séquentielle et parallèle
+    s1.parCost()
 
 #Preuve parrallèle>séquentiel
 def test_rapidité():
@@ -182,13 +184,13 @@ def test_maxpar_simple():
     print(X,Y,Z)
 
     # Affichage du graphe de précédence
-    # s1.draw()
+    s1.draw()
 
-    # # Test de déterminisme avec des exécutions randomisées
-    # s1.detTestRnd()
+    # Test de déterminisme avec des exécutions randomisées
+    s1.detTestRnd()
 
-    # # Comparaison des temps d'exécution séquentielle et parallèle
-    # s1.parCost()
+    # Comparaison des temps d'exécution séquentielle et parallèle
+    s1.parCost()
 
 # Appel de la fonction de test lors de l'exécution du fichier
 if __name__ == "__main__":

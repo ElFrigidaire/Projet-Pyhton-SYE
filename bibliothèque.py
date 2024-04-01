@@ -66,6 +66,7 @@ class TaskSystem:
                 for i in dependencies:
                     threads[i].join()
 
+                #On a essayé de lock et delock les variables, mais ça n'a pas marché
                 # for lock in task.writes:
                 #     lock.acquire()
                 
@@ -74,7 +75,7 @@ class TaskSystem:
                 
                 # for lock in task.writes:
                 #     # if lock.locked():
-                #     print("Je suis locked")
+                #     print("Je suis lock")
                 #     lock.release()
                 
             thread = threading.Thread(target=newtarget)
@@ -125,7 +126,6 @@ class TaskSystem:
                 return
         print(f"Aucune indétermination détectée après {num_tests} tests")
 
-    
     def parCost(self):
         num_runs = 10
         seq_times = []  
